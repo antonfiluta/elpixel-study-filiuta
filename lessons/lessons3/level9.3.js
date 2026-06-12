@@ -15,11 +15,17 @@ function findDatesWithFourTwos() {
     for (let month = 1; month <= 12; month++) {
       const daysInMonth = new Date(year, month, 0).getDate();
       for (let day = 1; day <= daysInMonth; day++) {
-        const dateStr = `${day.toString().padStart(2, '0')}.${month.toString().padStart(2, '0')}.${year}`;
-        const countTwos = (dateStr.match(/2/g) || []).length;
-        if (countTwos === 4) {
-          result.push(dateStr);
-        }
+        const dayStr = day.toString().padStart(2, '0');
+        const monthStr = month.toString().padStart(2, '0');
+        const yearStr = year.toString();
+        const dateStr = `${dayStr}.${monthStr}.${yearStr}`;
+
+        const countTwos = [...dateStr].reduce(
+          (sum, item) => sum + (item === '2' ? 1 : 0),
+          0
+        );
+
+        if (countTwos === 4) result.push(dateStr);
       }
     }
   }

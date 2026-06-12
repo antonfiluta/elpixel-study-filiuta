@@ -70,14 +70,18 @@ export function randomSpecificArray(n, min, max) {
 
 // Сделайте функцию, которая заполнит массив N случайными числами из заданного промежутка так, чтобы числа не повторялись.
 export function randomArrayUnique(n, min, max) {
-  const rangeSize = max - min + 1;
-  if (n > rangeSize) n = rangeSize; // иначе невозможно без повторений
-  const available = [];
-  for (let i = min; i <= max; i++) available.push(i);
-  // Перемешиваем (алгоритм Фишера-Йетса)
-  for (let i = available.length - 1; i > 0; i--) {
-    const j = Math.floor(Math.random() * (i + 1));
-    [available[i], available[j]] = [available[j], available[i]];
+  const range = max - min + 1;
+  const actualCount = Math.min(n, range);
+  const result = [];
+  const used = new Set();
+
+  while (result.length < actualCount) {
+    const newItem = Math.floor(min + Math.random() * range);
+
+    if (!used.has(newItem)) {
+      used.add(newItem);
+      result.push(newItem);
+    }
   }
-  return available.slice(0, n);
+  return result;
 }
