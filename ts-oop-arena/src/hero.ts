@@ -1,12 +1,12 @@
 import { ICharacter } from './ICharacter';
 
 export abstract class Hero implements ICharacter {
-  private _name = 'null';
-  private _health = 100;
-  public level = 0;
+  private _name: string;
+  private _health: number;
+  public level: number;
 
   constructor(name: string) {
-    this.name = name;
+    this._name = name;
     this._health = 100;
     this.level = 1;
   }
