@@ -1,0 +1,26 @@
+{
+  "name": "elpixel-study-filiuta",
+  "version": "1.0.0",
+  "description": "Repo for improving frontend skills",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "format": "prettier --write .",
+    "format:check": "prettier --check ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/antonfiluta/elpixel-study-filiuta.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "module",
+  "bugs": {
+    "url": "https://github.com/antonfiluta/elpixel-study-filiuta/issues"
+  },
+  "homepage": "https://github.com/antonfiluta/elpixel-study-filiuta#readme",
+  "devDependencies": {
+    "prettier": "^3.8.3"
+  }
+}
