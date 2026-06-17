@@ -2,7 +2,6 @@ import { Mage } from './src/mage.js';
 import { Warrior } from './src/warrior.js';
 import { Archer } from './src/archer.js';
 
-// Создаём героев
 const mage = new Mage('Гендальф', 50);
 const warrior = new Warrior('Арагорн', 15);
 const archer = new Archer('Леголас', 5);
