@@ -4,7 +4,7 @@
   "description": "Repo for improving frontend skills",
   "main": "index.js",
   "scripts": {
-    "start": "node index.js",
+    "start": "tsc --watch",
     "format": "prettier --write .",
     "format:check": "prettier --check ."
   },
@@ -21,6 +21,7 @@
   },
   "homepage": "https://github.com/antonfiluta/elpixel-study-filiuta#readme",
   "devDependencies": {
-    "prettier": "^3.8.3"
+    "prettier": "^3.8.3",
+    "typescript": "^6.0.3"
   }
 }
